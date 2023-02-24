@@ -1,23 +1,56 @@
-{%extends "blog/base.html"%}
-{% load crispy_forms_tags %}
-{% block content%}
-    <div class='content-section'>
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log IN</legend>
-                {{form|crispy}}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Log In</button>
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GpTools-Login</title>
+    <link rel="stylesheet" type="text/css" href="static/users/style.css">
+</head>
+<body>
+    <div class="box" >
+        <span class="borderLine"></span>
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+        {%endfor%}
+         {% endif %}
+        <form  method="POST">
+            {% csrf_token %}
+            <h2>Sign in</h2>
+            <div class="inputBox">
+                <select name="login-option" required>
+                    <option value="" disabled selected hidden>Select a login method</option>
+                    <option value="username">Username</option>
+                    <option value="ldap">LDAP</option>
+                    <option value="sso">SSO</option>
+                </select>
+                
+                
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" name="username">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" name="password">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="{% url 'register' %}">Sign up</a>
+            </div>
+            <input type="submit" value="Log In">
         </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Need An Account ?<a class="ml-2" href="{% url 'register' %}" >Sign Up Now</a>
-            </small>
-        </div>
     </div>
-{% endblock content%}
+</body>
+</html>
 
 
