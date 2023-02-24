@@ -22,7 +22,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return render(request, 'users/logout.html')
+    return render(request, 'users/login.html')
     
 
 def register(request):
