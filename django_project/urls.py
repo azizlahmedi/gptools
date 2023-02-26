@@ -23,7 +23,7 @@ urlpatterns = [
 #partie urls de users 
     path('login/',user_views.login_user, name="login"),
     path('logout/',user_views.logout_user, name="logout"),
-    path('register/',user_views.register, name ='register'),
+    path('sign up/',user_views.register, name ='register'),
     path('profile/',user_views.profile, name ='profile'),
     
     path('',user_views.login_user, name="login"),

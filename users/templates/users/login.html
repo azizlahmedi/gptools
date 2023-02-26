@@ -13,6 +13,21 @@
     <link rel="stylesheet" type="text/css" href="{% static 'users/style.css'%}">
 </head>
 <body>
+    <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+          {% if messages %}
+            {% for message in messages %}
+      
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{message}}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
+            {%endfor%}
+          {% endif %}
+          {% endblock %}
+        </div>
     <div class="box" >
         <span class="borderLine"></span>
         <form  method="POST">
@@ -21,9 +36,9 @@
             <div class="inputBox">
                 <select name="login-option" required>
                     <option value="" disabled selected hidden>Select a login method</option>
-                    <option value="username">Username</option>
-                    <option value="ldap">LDAP</option>
-                    <option value="sso">SSO</option>
+                    <option value="Username">Username</option>
+                    <option value="LDAP">LDAP</option>
+                    <option value="SSO">SSO</option>
                 </select>
                 
                 
@@ -45,16 +60,7 @@
             <div>
             <input type="submit" value="Log in">
             </div>
-            {% if messages %}
-                {% for message in messages %}
-          
-                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                  {{message}}
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-            
-                {%endfor%}
-            {% endif %}
+           
     
         </form>
     </div>
