@@ -15,7 +15,6 @@
 <body>
     <div class="row">
         <div class="col-md-8">
-          {% block content %}
           {% if messages %}
             {% for message in messages %}
       
@@ -26,7 +25,6 @@
             </div>
             {%endfor%}
           {% endif %}
-          {% endblock %}
         </div>
     <div class="box" >
         <span class="borderLine"></span>
