@@ -32,12 +32,12 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jquery',
+    'crispy_forms',
     'bootstrap',
     'factory_app.apps.FactoryAppConfig',
     'blog.apps.BlogConfig',
     'commons',
     'users.apps.UsersConfig',
-    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

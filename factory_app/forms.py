@@ -12,19 +12,19 @@ log = logging.getLogger(__name__)
 
 
 class BatchForm(forms.ModelForm):
+    procedure_names = forms.CharField(
+        widget=forms.Textarea, 
+        help_text='A procedure per line or use comma as separator.'
+    )
+
     class Meta:
         model = models.Batch
         fields = ['name']
 
-    procedure_names = forms.CharField(widget=forms.Textarea, help_text='A procedure per line or use comma as separator.')
-
     def __init__(self, *args, **kwargs):
         super(BatchForm, self).__init__(*args, **kwargs)
-        self.helper = FormHelper(self)
-        self.helper.form_tag = False
-        self.helper.form_class = 'form-horizontal'
-        self.helper.label_class = 'col-sm-3'
-        self.helper.field_class = 'col-sm-9'
+        self.fields['name'].widget.attrs['class'] = 'form-control'
+        self.fields['procedure_names'].widget.attrs['class'] = 'form-control'
 
     def clean_procedure_names(self):
         procedure_names = self.cleaned_data.get('procedure_names')
