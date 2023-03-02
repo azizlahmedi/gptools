@@ -33,10 +33,10 @@ urlpatterns = [
     path('',user_views.login_user, name="login"),
     path('',include('django.contrib.auth.urls')),
     
-    path('GPtools/', include('blog.urls')),
+    #path('GPtools/', include('blog.urls')),
 
-    path('Gptest/', include('factory_app.urls')),
-    path('Gptestt/', include('commons.urls')),
+    path('GPtools/', include('factory_app.urls')),
+    path('Gpcommons/', include('commons.urls')),
     
     
 

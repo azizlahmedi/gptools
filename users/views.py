@@ -12,7 +12,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('blog-home')
+            return redirect('factory-home')
 
         else:
             messages.success(request,("Sorry, username or password was incorrect. Try Again.."))
