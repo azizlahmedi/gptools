@@ -185,6 +185,8 @@ background-color: #09E49F;
 }
 .box form input[type="submit"]
 {
+    display: block;
+    margin: auto;
     border: none;
     outline: none;
     padding: 9px 25px;
