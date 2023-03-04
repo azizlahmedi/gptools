@@ -17,6 +17,9 @@ background-image: url('nx.png');
 background-size: cover;
 background-position: center;
 }
+.box .borderLine .inputBox .error{
+color: #09E49F;
+}
 .box
 {
     position: relative;
@@ -75,7 +78,7 @@ background-position: center;
     position: absolute;
     inset: 4px; 
     background: #222;
-    padding: 50px 40px ;
+    padding: 30px 40px ;
     border-radius: 8px;
     z-index: 2;
     display: flex;
