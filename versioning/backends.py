@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 import logging
 
-import neoxam.elastic.backends
-from neoxam.dblocks.backends import lock_backend
-from neoxam.versioning import settings, models, consts
+import elastic.backends
+from dblocks.backends import lock_backend
+from versioning import settings, models, consts
 
 log = logging.getLogger(__name__)
 
 
-class ElasticsearchBackend(neoxam.elastic.backends.ElasticBackend):
+class ElasticsearchBackend(elastic.backends.ElasticBackend):
     def get_mapping(self):
         return {
             self.mapping: {

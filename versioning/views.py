@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.http.response import JsonResponse
-from neoxam.adltrack import models
-from neoxam.versioning import models
+from adltrack import models
+from versioning import models
 
 
 def handle_compilation_head(request, schema_version):

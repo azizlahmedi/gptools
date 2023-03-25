@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '10.53.1.149']
 
 INSTALLED_APPS = [
     'jquery',
+    'versioning',
+    'adltrack',
     'crispy_forms',
     'bootstrap',
     'factory_app.apps.FactoryAppConfig',

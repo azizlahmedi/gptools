@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-l
 from django.core.management.base import BaseCommand
 
-from neoxam.versioning import backends
+from versioning import backends
 
 
 class Command(BaseCommand):

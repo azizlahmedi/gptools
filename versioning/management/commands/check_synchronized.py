@@ -6,7 +6,7 @@ import hashlib
 from django.core.management.base import BaseCommand
 from django.db.models.aggregates import Max
 
-from neoxam.versioning.models import AdlObj
+from versioning.models import AdlObj
 
 
 class Command(BaseCommand):

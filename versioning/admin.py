@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from neoxam.versioning import models
+from versioning import models
 
 
 @admin.register(models.AdlObj)

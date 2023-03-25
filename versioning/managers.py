@@ -5,7 +5,7 @@ import collections
 
 from django.db import models
 from django.db.models import Max
-from neoxam.versioning import settings
+from versioning import settings
 
 
 class CompilationManager(models.Manager):

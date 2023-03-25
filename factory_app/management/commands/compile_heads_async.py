@@ -7,7 +7,7 @@ import re
 import requests
 from django.core.management.base import BaseCommand, CommandError
 
-from neoxam.factory_app import consts, models
+from factory_app import consts, models
 
 log = logging.getLogger(__name__)
 

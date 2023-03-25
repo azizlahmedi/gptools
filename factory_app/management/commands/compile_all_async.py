@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
-from neoxam.factory_app import clients
+from . import clients
 
-from neoxam.versioning import models as versioning_models
+from versioning import models as versioning_models
 
 DEFAULT_VERSION = 2009
 

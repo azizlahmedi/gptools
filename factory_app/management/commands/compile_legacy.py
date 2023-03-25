@@ -2,8 +2,8 @@
 import traceback
 
 from django.core.management.base import BaseCommand
-from neoxam.factory_app import models, consts
-from neoxam.factory_app import services as factory_services
+from factory_app import models, consts
+from factory_app import services as factory_services
 
 
 class Command(BaseCommand):
