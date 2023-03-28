@@ -12,6 +12,7 @@ except ImportError:
     ez_setup.use_setuptools()
 from setuptools import setup, find_packages
 
+
 setup(
     name='neoxam',
     version='1.0',
@@ -28,4 +29,5 @@ setup(
             'fab = fabric.main:main',
         ],
     },
+    
 )
