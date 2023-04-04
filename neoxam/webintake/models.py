@@ -2,7 +2,7 @@
 from django.db import models
 
 
-class User(models.Model):
+class wUser(models.Model):
     user_name = models.CharField(max_length=12, primary_key=True)
     ip_address = models.CharField(max_length=15)
     port_number = models.IntegerField()

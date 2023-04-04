@@ -10,7 +10,7 @@ from neoxam.webintake import models
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.User
+        model = models.wUser
         fields = ('user_name', 'ip_address', 'port_number')
 
 
@@ -20,8 +20,8 @@ def create_update_user(request):
         data = JSONParser().parse(request)
         user_name = data['user_name']
         try:
-            user = models.User.objects.get(user_name=user_name)
-        except models.User.DoesNotExist:
+            user = models.wUser.objects.get(user_name=user_name)
+        except models.wUser.DoesNotExist:
             serializer = UserSerializer(data=data)
         else:
             if check_connectivity(user.ip_address, user.port_number):
@@ -37,8 +37,8 @@ def create_update_user(request):
 @csrf_exempt
 def retrieve_delete_user(request, user_name):
     try:
-        user = models.User.objects.get(user_name=user_name)
-    except models.User.DoesNotExist:
+        user = models.wUser.objects.get(user_name=user_name)
+    except models.wUser.DoesNotExist:
         return HttpResponse(status=404)
 
     if request.method == 'GET':

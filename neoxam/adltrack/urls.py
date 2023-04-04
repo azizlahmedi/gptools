@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.conf import settings
 from django.urls import re_path
-from django.conf.urls import url, include
+from django.conf.urls import  include
 from django.conf.urls.static import static
 from rest_framework.urlpatterns import format_suffix_patterns
 
@@ -54,4 +54,4 @@ urlpatterns = [
     re_path(r'^procedure-versions/(?P<version>[0-9]+)/(?P<name>[a-z0-9\.]+)/(?P<revision>[0-9]+)/$',
         views.handle_procedure_version, name='adltrack-procedure-version'),
     re_path(r'^tops/$', views.handle_tops, name='adltrack-tops'),
-] + static(settings.SENDFILE_URL, document_root=settings.SENDFILE_ROOT)
+]

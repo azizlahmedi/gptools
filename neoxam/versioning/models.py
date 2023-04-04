@@ -179,10 +179,10 @@ class Comment(models.Model):
     type_object = models.CharField(max_length=256, blank=True, null=True)
     external_id = models.CharField(max_length=256, blank=True, null=True)
     user = models.CharField(max_length=256)
-    adlobj = models.OneToOneField(AdlObj, db_column='adlobj_id', related_name='comment')
+    adlobj = models.OneToOneField(AdlObj, on_delete=models.CASCADE,db_column='adlobj_id', related_name='comment')
     is_user_doc = models.CharField(max_length=1, blank=True, null=True)
     date_time = models.DateTimeField(blank=True, null=True)
-    comment_type = models.ForeignKey(CommentType, db_column='ctype_id')
+    comment_type = models.ForeignKey(CommentType, on_delete=models.CASCADE,db_column='ctype_id')
 
     class Meta:
         db_table = 'comment'
@@ -191,7 +191,7 @@ class Comment(models.Model):
 class Compilation(models.Model):
     cdate = models.DateTimeField(blank=True, null=True)
     maxrev = models.IntegerField(blank=True, null=True)
-    adlobj = models.ForeignKey(AdlObj, db_column='adlobj_id', blank=True, null=True)
+    adlobj = models.ForeignKey(AdlObj, on_delete=models.CASCADE,db_column='adlobj_id', blank=True, null=True)
     r_maxrev = models.IntegerField(blank=True, null=True)
 
     class Meta:

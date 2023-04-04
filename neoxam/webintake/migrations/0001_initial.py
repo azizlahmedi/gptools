@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='User',
+            name='wUser',
             fields=[
                 ('user_name', models.CharField(max_length=12, primary_key=True, serialize=False)),
                 ('ip_address', models.CharField(max_length=15)),

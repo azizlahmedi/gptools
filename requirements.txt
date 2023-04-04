@@ -14,7 +14,9 @@ celery==3.1.20
 virtualenv==14.0.6
 ldap3==2.2.1
 JSONField==3.1.0
-
+polib
+invoke
+paramiko
 watchdog==0.8.3    # supervisor
 meld3==1.0.2    # supervisor
 

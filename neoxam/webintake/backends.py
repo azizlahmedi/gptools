@@ -24,7 +24,7 @@ def check_connectivity(ip_addr, port):
 
 def clean_up_users():
     to_delete = []
-    for u in models.User.objects.all():
+    for u in models.wUser.objects.all():
         ip_address = u.ip_address
         port = u.port_number
         if check_connectivity(ip_address, port):

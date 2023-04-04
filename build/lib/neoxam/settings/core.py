@@ -12,7 +12,7 @@ class Core(Mixin):
     MANAGERS = ADMINS
     DEFAULT_FROM_EMAIL = 'olivier.mansion@neoxam.com'
     DEBUG = True
-    ALLOWED_HOSTS = ('.iadev-tools',)
+    ALLOWED_HOSTS = ['.iadev-tools','localhost', '127.0.0.1', '10.53.1.149']
     INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',

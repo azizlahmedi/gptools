@@ -24,7 +24,7 @@ class Repository(models.Model):
 
 class Checkout(models.Model):
     hostname = models.CharField(max_length=64, default=socket.gethostname)
-    repository = models.ForeignKey(Repository, related_name='checkouts')
+    repository = models.ForeignKey(Repository,on_delete=models.CASCADE, related_name='checkouts')
     in_use = models.BooleanField(default=False)
 
     @property

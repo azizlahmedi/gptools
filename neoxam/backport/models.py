@@ -6,7 +6,7 @@ class Record(models.Model):
 
     class Meta:
         unique_together = ('commit', 'from_version', 'to_version')
-    commit = models.OneToOneField(adl_models.Commit,
+    commit = models.OneToOneField(adl_models.Commit, on_delete=models.CASCADE ,
                                   related_name='backport_record')    
     from_version = models.CharField(max_length=32)
     to_version = models.CharField(max_length=32)

@@ -33,7 +33,7 @@ urlpatterns = [
     path('',user_views.login_user, name="login"),
     path('',include('django.contrib.auth.urls')),
     
-    path('GPtools/', factory_views.handle_home, name='factory-home'),
+    #path('GPtools/', factory_views.handle_home, name='factory-home'),
 
     path('GPtools/', include('neoxam.urls')),
     path('Gpcommons/', include('neoxam.commons.urls')),

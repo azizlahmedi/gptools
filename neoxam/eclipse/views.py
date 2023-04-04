@@ -12,7 +12,7 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 
-from factory.backends.base import untar, support_environ
+#from factory.backends.base import untar, support_environ
 from neoxam.eclipse import settings, forms, backends, consts, models
 from neoxam.factory_app import clients as factory_clients
 from neoxam.factory_app import consts as factory_consts

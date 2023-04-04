@@ -70,9 +70,7 @@ class Development(Site):
     def FACTORY_SETTINGS(self):
         return os.path.join(self.BASE_DIR, 'neoxam', 'factory_app', 'tests', 'factory.cfg')
 
-    @property
-    def HARRY_SETTINGS(self):
-        return os.path.join(self.BASE_DIR, 'neoxam', 'harry', 'tests', 'delia_mlg.cfg')
+    
 
 
 class Test(Development):
@@ -150,3 +148,6 @@ class Production(Site):
 
     ECLIPSE_ELASTICSEARCH_URL = VERSIONING_ELASTICSEARCH_URL
     ECLIPSE_PUBLISH_URL = 'http://iadev-tools/eclipse/downloads/'
+
+
+
