@@ -49,13 +49,11 @@
                 <li><a href="{% url 'adltrack-home' %}">Source analysis</a></li>
                 <li><a href="{{ kibana_url }}#/dashboard/Compilations" target="_blank">Compilations</a></li>
                 <li><a href="{% url 'factory-home' %}">Compilations (Delia)</a></li>
-                <li><a href="{% url 'delivery-home' %}">Delivery (Delia)</a></li>
-                <li><a href="{% url 'harry-home' %}">Untranslated</a></li>
                 <li><a href="{{ kibana_url }}#/dashboard/Eclipse" target="_blank">Eclipse compilations (Delia)</a></li>
                 <li><a href="{% url 'backport-home' %}">Backport</a></li>
                 <li><a href="{% url 'gpatcher-home' %}">Remove carriage return</a></li>
                 <li><a href="{% url 'initial-home' %}">Initial commits</a></li>
-                <li><a href="{% url 'champagne-home' %}">Magnum compilations</a></li>
+
               </ul>
             </li>
             <li class="dropdown">
@@ -94,21 +92,13 @@
             <li><a href="{% url 'adltrack-home' %}">ADL source analysis</a></li>
             <li><a href="{{ kibana_url }}#/dashboard/Compilations" target="_blank">ADL compilations</a></li>
             <li><a href="{% url 'factory-home' %}">ADL compilations (Delia)</a></li>
-            <li><a href="{% url 'delivery-home' %}">ADL delivery (Delia)</a></li>
             <li><a href="{{ kibana_url }}#/dashboard/Eclipse" target="_blank">Eclipse compilations (Delia)</a></li>
-            <li><a href="{% url 'harry-home' %}">Untranslated</a></li>
             <li><a href="{% url 'backport-home' %}">Backport</a></li>
             <li><a href="{% url 'gpatcher-home' %}">Remove carriage return</a></li>
             <li><a href="{% url 'initial-home' %}">Initial commits</a></li>
             <li><a href="{% url 'champagne-home' %}">Magnum compilations</a></li>
           </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="/dashing/delia">Dashing delia</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="{% url 'scrumcards-home' %}">Scrum cards</a></li>
-            <li><a href="{% url 'index' %}" target="_blank">Scrum report</a></li>
-          </ul>
+          
           {% endblock sidebar %}
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags *must* come first in the head, any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static 'favicon.ico' %}">
@@ -49,26 +49,16 @@
                 <li><a href="{% url 'adltrack-home' %}">Source analysis</a></li>
                 <li><a href="{{ kibana_url }}#/dashboard/Compilations" target="_blank">Compilations</a></li>
                 <li><a href="{% url 'factory-home' %}">Compilations (Delia)</a></li>
-                <li><a href="{% url 'delivery-home' %}">Delivery (Delia)</a></li>
-                <li><a href="{% url 'harry-home' %}">Untranslated</a></li>
                 <li><a href="{{ kibana_url }}#/dashboard/Eclipse" target="_blank">Eclipse compilations (Delia)</a></li>
                 <li><a href="{% url 'backport-home' %}">Backport</a></li>
                 <li><a href="{% url 'gpatcher-home' %}">Remove carriage return</a></li>
                 <li><a href="{% url 'initial-home' %}">Initial commits</a></li>
-                <li><a href="{% url 'champagne-home' %}">Magnum compilations</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dashing <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/dashing/delia" target="_blank">Delia</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scrum <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="{% url 'scrumcards-home' %}">Cards</a></li>
-                <li><a href="{% url 'index' %}" target="_blank">Report</a></li>
               </ul>
             </li>
           </ul>
@@ -94,13 +84,10 @@
             <li><a href="{% url 'adltrack-home' %}">ADL source analysis</a></li>
             <li><a href="{{ kibana_url }}#/dashboard/Compilations" target="_blank">ADL compilations</a></li>
             <li><a href="{% url 'factory-home' %}">ADL compilations (Delia)</a></li>
-            <li><a href="{% url 'delivery-home' %}">ADL delivery (Delia)</a></li>
             <li><a href="{{ kibana_url }}#/dashboard/Eclipse" target="_blank">Eclipse compilations (Delia)</a></li>
-            <li><a href="{% url 'harry-home' %}">Untranslated</a></li>
             <li><a href="{% url 'backport-home' %}">Backport</a></li>
             <li><a href="{% url 'gpatcher-home' %}">Remove carriage return</a></li>
             <li><a href="{% url 'initial-home' %}">Initial commits</a></li>
-            <li><a href="{% url 'champagne-home' %}">Magnum compilations</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="/dashing/delia">Dashing delia</a></li>

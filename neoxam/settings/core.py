@@ -16,7 +16,8 @@ class Core(Mixin):
     DEBUG = True
     ALLOWED_HOSTS = ['.iadev-tools','localhost', '127.0.0.1', '10.53.1.149']
     INSTALLED_APPS = [
-        'Factory',
+        'bootstrap',
+        'crispy_forms',
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
@@ -163,3 +164,9 @@ class Core(Mixin):
     @property
     def LOGGING_LEVEL(self):
         return 'DEBUG' if self.DEBUG else 'INFO'
+
+
+
+
+STATIC_URL = 'static/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '10.53.1.149']
 
 INSTALLED_APPS = [
     'neoxam.apps.NeoxamConfig',
+    'bootstrap',
+    'crispy_bootstrap4',
     'crispy_forms',
     'users.apps.UsersConfig',
     'django.contrib.admin',
@@ -60,7 +62,7 @@ ROOT_URLCONF = 'django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r'C:\Users\lahme\OneDrive\Documents\iadev1.0\neoxam\factory_app\templates',r'C:\Users\lahme\OneDrive\Documents\iadev1.0\neoxam\commons\templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,7 +126,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL ='blog-home'
+LOGIN_REDIRECT_URL ='factory-home'
 LOGIN_URL = 'login'
 
 
